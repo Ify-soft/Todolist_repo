@@ -1,0 +1,135 @@
+ *{
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+	box-sizing:border-box;
+	
+	
+}
+
+nav{
+	width:100%;
+	background-color: yellowgreen;
+	height:100px;	
+
+}
+
+.container {
+	width:100%;
+	display: flex;
+	padding: 30px; 0;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.container h2{
+	border-radius: 25px;
+	border: 5px solid yellow;
+	font-weight: bold;
+	text-align: center;
+	padding: 0 10px;
+
+}
+.container ul{
+	text-align: left;
+}
+
+.container ul li{
+	display: inline-block;
+	color: red;
+	list-style-type: none;
+	margin-right: 30px;
+
+	position: relative;
+	text-align: center;
+
+
+}
+
+.container ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.container ul li::after{
+	content: '';
+	height: 3px;
+	width: 0%;
+	background: green;
+	left: 0;
+	bottom: -10px;
+	position: absolute;
+	transition: 0.5s;
+}
+
+.container ul li:hover::after{
+	width: 100%;
+}
+.content{
+	width: 100%;
+	position: absolute;
+	
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+
+}
+
+.butn{
+	width: 100px;
+	padding: 10px 0;
+	text-align: center;
+	margin:  20px 10px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 2px solid green;
+	background: transparent;
+	color: black;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden ;
+}
+
+.butn span{
+	background: green;
+	height: 100%;
+	width: 0%;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+
+}
+
+.butn:hover span{
+	width: 100%;
+}
+
+.butn:hover{
+	border: none;
+}
+
+
+.mr{
+	margin: 20px;
+}
+
+.styleForm{
+
+	width: 500px;
+
+	
+}
+
+.lab{
+	
+	
+	margin-left: 200px;
+
+
+}

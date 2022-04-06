@@ -1,0 +1,22 @@
+{% extends 'todo/base.html' %}
+
+{% block head %}
+{% endblock head %}
+
+
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="content">
+	<h1>What do you like to do today?</h1>
+	<div>
+		<button class="butn" type="button"><span></span><a href="{% url 'todo:todoform' %}">TodoList</a></button>
+		<button class="butn" type="button"><span></span><a href="{% url 'todo:updateform' %}">Analyze</a></button>
+	</div>
+</div>
+{% else %}
+<p>You are not allow to view this page</p>
+
+{% endif %}
+ 
+{% endblock content %}

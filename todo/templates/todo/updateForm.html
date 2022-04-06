@@ -1,0 +1,23 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<h1> Grade Todo List...</h1>
+
+<div class="lab">
+	<form action="" method="Post">
+		{% csrf_token %}
+		{% for datefield in date %}
+
+		{{ datefield.name }}{{datefield.stipulated_time}} 
+		{{ form.as_p }}
+		{% empty %}}
+		<p> Sorry, You haven't make a todolist today</p>
+
+
+		{% endfor %}
+		
+
+		<button name='submit' class="butn"><span></span>Grade</button>
+	</form>
+</div>
+{% endblock content %}
