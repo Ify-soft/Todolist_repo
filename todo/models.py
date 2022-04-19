@@ -8,7 +8,7 @@ User= get_user_model()
 
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	image=models.ImageField(upload_to='media/')
+	image=models.ImageField(blank=True, null=True, upload_to='media/')
 
 	def __str__(self):
 		return self.user.username
@@ -26,3 +26,5 @@ class todolist(models.Model):
 
 	def get_absolute_url(self):
 		return reverse('todo:home')
+
+	

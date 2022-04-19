@@ -13,7 +13,7 @@
 			<h2>ToDoList</h2>
 			<ul>
 				
-				<li><a href="#">Profile</a></li>
+				<li><a href="{% url 'todo:profile_page' %}">Profile</a></li>
 				{% if user.is_authenticated %}
 				<li><a href="{% url 'logout' %}">logout</a></li>
 				<li>Welcome {{ user.username }}</li>

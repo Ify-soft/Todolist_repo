@@ -1,0 +1,44 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<section>	
+	<div class="contain">
+		<div >	
+			<img onclick="clicking()" id="inputForm" src="{{ user_pix.image.url }}"/>
+			
+		</div>
+		<hr>
+		
+		<div>	
+			<p> Username: {{ user_data.username }}</p>
+			 <p> Name: {{ user_data.first_name }}  {{ user_data.last_name }}</p>
+			 <p> Email: {{ user_data.email }}</p>
+
+		</div>
+		<div id="show">
+			
+		</div>
+		<hr>
+		<div>	
+			<button class="butn"><a class= "linkDecoration" href="{% url 'todo:profileEdit' user.pk %}">edit profile</a><span></span></button>
+		</div>
+		<hr>
+		<div>	
+			<button class="butn"><a class= "linkDecoration" href="{% url 'todo:listToday' %}">Today's List</a><span></span></button>
+		</div>
+		<hr>
+		<div>	
+			<button class="butn"><a class= "linkDecoration" href="{% url 'todo:listPerDay' %}">All List</a><span></span></button>
+		</div>
+		<hr>
+		<div>	
+			<button class="butn"><a class= "linkDecoration" href="{% url 'todo:statGraph' %}">Stat</a><span></span></button>
+		</div>
+	</div>
+</section>
+{% else %}
+<p>You are not allow to view this page</p>
+{% endif %}
+
+{% endblock content %}

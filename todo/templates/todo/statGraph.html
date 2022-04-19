@@ -1,0 +1,9 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+{% if graph %}
+<img src="data:image/png;base64, {{ graph | safe }}">
+{% endif %}
+{% endblock content %}
+
+

@@ -1,0 +1,26 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+{% for key, query in listPerDay.items %}
+<article class="sec">
+	<section>
+		<div class="dateDesign">
+			{{key|date:'l d-m-Y'}}
+		</div>
+	</section>
+	<section class="queryDesign">
+		{% for q in query %}
+		
+		<hgroup>
+			<div>
+			<p>{{q.name}}   {{q.stipulated_time }}</p>
+			<br>
+		</div>
+		</hgroup>
+		{% endfor %}
+	</section>
+			
+</article>
+{% endfor %}
+{% endblock content %}

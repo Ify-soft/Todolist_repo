@@ -28,8 +28,9 @@ nav{
 	border: 5px solid yellow;
 	font-weight: bold;
 	text-align: center;
+	
+	
 	padding: 0 10px;
-
 }
 .container ul{
 	text-align: left;
@@ -37,9 +38,9 @@ nav{
 
 .container ul li{
 	display: inline-block;
-	color: red;
+	/*color: red;*/
 	list-style-type: none;
-	margin-right: 30px;
+	margin-right: 20px;
 
 	position: relative;
 	text-align: center;
@@ -126,10 +127,50 @@ nav{
 	
 }
 
+.contain{
+	margin-left: 0;
+	border: 2px outset #ececec;
+	position: relative;
+	margin-right: 800px;
+	padding: 10px;
+}
+
 .lab{
 	
 	
 	margin-left: 200px;
 
+}
 
+a.linkDecoration{
+	text-decoration: none;
+	color: black;
+}
+
+a.linkDecoration:hover{
+	text-decoration-color: black;
+	text-decoration: none;
+}
+
+.sec{
+	align-items: center;
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-top: 40px;
+}
+.dateDesign{
+	border: 2px solid #ececec;
+	text-align: center;
+	border-radius: 2px;
+	padding: 10px;
+	background-color: rgba(234,200,0,0.8);
+	color: white;
+
+}
+
+.queryDesign{
+	border: 2px solid #ececec;
+	text-align: center;
+	border-radius: 2px;
+	padding: 10px;
 }

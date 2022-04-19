@@ -1,0 +1,17 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<h1> Update Profile</h1>
+
+<div class="lab">
+	<form action="#" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{imageForm.as_p}}
+		{{userForm.as_p}}
+		
+		<button name='submit' class="butn"><span></span>Grade</button>
+
+		
+	</form>
+</div>
+{% endblock content %}

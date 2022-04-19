@@ -1,0 +1,17 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+{% for filtered_list in today_filtered_list %}
+<section>
+	<div>
+		{{filtered_list}}
+	</div>
+
+	<div>
+		
+	</div>
+</section>
+{% empty %}
+<p>You haven't make a list today</p>
+{% endfor %}
+{% endblock content %}

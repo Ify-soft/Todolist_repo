@@ -4,20 +4,22 @@
 <h1> Grade Todo List...</h1>
 
 <div class="lab">
-	<form action="" method="Post">
+	<form action="{% url 'todo:responseform' %}" method="POST">
 		{% csrf_token %}
-		{% for datefield in date %}
+		{% for todolist in todo %}
 
-		{{ datefield.name }}{{datefield.stipulated_time}} 
-		{{ form.as_p }}
-		{% empty %}}
+		{{ todolist.name }}   {{ todolist.stipulated_time}} {{ todolist.id }}
+		<input type="checkbox" name= {{ todolist.id }} value=True></br>
+		
+		{% empty %}
+
 		<p> Sorry, You haven't make a todolist today</p>
 
 
 		{% endfor %}
-		
-
 		<button name='submit' class="butn"><span></span>Grade</button>
+
+		
 	</form>
 </div>
 {% endblock content %}
